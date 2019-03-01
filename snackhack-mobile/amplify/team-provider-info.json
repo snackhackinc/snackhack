@@ -1,0 +1,19 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "snackhack-mobile-20190228165856-authRole",
+            "UnauthRoleArn": "arn:aws:iam::284457666796:role/snackhack-mobile-20190228165856-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::284457666796:role/snackhack-mobile-20190228165856-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "snackhack-mobile-20190228165856-deployment",
+            "UnauthRoleName": "snackhack-mobile-20190228165856-unauthRole",
+            "StackName": "snackhack-mobile-20190228165856",
+            "StackId": "arn:aws:cloudformation:us-east-2:284457666796:stack/snackhack-mobile-20190228165856/0cd08be0-3ba4-11e9-802f-069569a529ae"
+        },
+        "categories": {
+            "auth": {
+                "cognitof8bda684": {}
+            }
+        }
+    }
+}
