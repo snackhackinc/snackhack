@@ -3,12 +3,12 @@ import { Platform } from 'react-native';
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
 
 import TabBarIcon from '../components/TabBarIcon';
-import HomeScreen from '../screens/HomeScreen';
-import LinksScreen from '../screens/LinksScreen';
-import SettingsScreen from '../screens/SettingsScreen';
+import Home from '../screens/Home';
+import My_Hacks from '../screens/My_Hacks';
+import Settings from '../screens/Settings';
 
 const HomeStack = createStackNavigator({
-  Home: HomeScreen,
+  Home: Home,
 });
 
 HomeStack.navigationOptions = {
@@ -25,12 +25,12 @@ HomeStack.navigationOptions = {
   ),
 };
 
-const LinksStack = createStackNavigator({
-  Links: LinksScreen,
+const My_HacksStack = createStackNavigator({
+  My_Hacks: My_Hacks,
 });
 
-LinksStack.navigationOptions = {
-  tabBarLabel: 'Links',
+My_HacksStack.navigationOptions = {
+  tabBarLabel: 'My Hacks',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -40,7 +40,7 @@ LinksStack.navigationOptions = {
 };
 
 const SettingsStack = createStackNavigator({
-  Settings: SettingsScreen,
+  Settings: Settings,
 });
 
 SettingsStack.navigationOptions = {
@@ -55,6 +55,7 @@ SettingsStack.navigationOptions = {
 
 export default createBottomTabNavigator({
   HomeStack,
-  LinksStack,
+  My_HacksStack,
   SettingsStack,
+
 });
