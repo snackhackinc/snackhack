@@ -4,11 +4,13 @@ const container = StyleSheet.create({
     container: {
       flex: 1,
       backgroundColor: '#fff',
+      paddingLeft: 20,
+      paddingRight: 20
     }})
 
 const title = StyleSheet.create({
     title:{
-        padding: 50,
+        padding: 30,
         fontSize: 48,
         color: 'rgba(255, 128, 0, 1)',
         lineHeight: 24,
