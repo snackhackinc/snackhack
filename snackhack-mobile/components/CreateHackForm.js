@@ -9,12 +9,12 @@ const Form = t.form.Form;
 var HackFields = t.struct({
     firstname: t.String,
     lastname: t.String,
-    business: t.String,
-    orderTime: t.Date,
-    fee: t.Number,
-    deliveryLocation: t.String,
-    deliveryTime: t.Date,
-    ordersAvailable: t.Number
+    // business: t.String,
+    // orderTime: t.Date,
+    // fee: t.Number,
+    // deliveryLocation: t.String,
+    // deliveryTime: t.Date,
+    // ordersAvailable: t.Number
     })
 
 var options = {} //Optional rendering options (see online documentation for tcomb-form-native)
@@ -28,10 +28,24 @@ export default class CreateHackForm extends React.Component {
 
     handleClick = () => {
         var value = this.refs.form.getValue();
-        if (value){
-            console.log(value)
-        }
-        console.log("Form Submitted")
+        return fetch('https://f389gs7mlk.execute-api.us-east-2.amazonaws.com/default/createHack', {  
+            method: 'POST',
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              value
+            })
+          })
+        .then((response) => response.json())
+        .then((responseJson) => {
+        console.log(responseJson)
+        return responseJson;
+        })
+        .catch((error) => {
+        console.error(error);
+        });
     }
 
     handleCreateHackForm = (e) => {
